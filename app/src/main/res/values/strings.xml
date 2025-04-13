@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab_4</string>
+    <string name="app_header">MP3 and MP4 player</string>
+    <string name="paste_URL">Paste the URL to download the file…</string>
+    <string name="upload_file">Upload the file from the Internet</string>
+    <string name="or">or</string>
+    <string name="select_file">Select a file from local storage</string>
+</resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/page_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/page_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:text="@string/app_header"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/page_title"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="#707070">
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/paste_URL"
+            android:textColorHint="#CCCCCC"
+            android:textStyle="italic"
+            android:inputType="textUri"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_underline"
+            android:padding="8dp" />
+
+        <LinearLayout
+            android:id="@+id/blockUploadFromInternet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/dashed_border">
+
+            <ImageView
+                android:id="@+id/iconUploadInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_cloud_upload_24" />
+
+            <TextView
+                android:id="@+id/textUploadInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_file"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/or_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:id="@+id/blockChooseLocal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:background="@drawable/dashed_border">
+
+            <ImageView
+                android:id="@+id/iconChooseLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_drive_folder_upload_24"/>
+
+            <TextView
+                android:id="@+id/textChooseLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_file"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</RelativeLayout>
